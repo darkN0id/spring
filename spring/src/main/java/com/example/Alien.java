@@ -1,26 +1,28 @@
 package com.example;
 
 public class Alien {
-    private Laptop lap;
+    // private Laptop lap;
+    private Computer comp;
     private int age; 
 
-    public Alien(int age, Laptop lap) {
+    public Alien(int age, Computer comp) {
         System.out.println("Alien object created successfully");
         this.age = age;
-        this.lap = lap;
+        this.comp = comp;
     }
+    
 
     public void code() {
         System.out.println("i am coding");
-        lap.compile();
+        comp.compile();
     }
 
-    public Laptop getLap() {
-        return lap;
+    public Computer getComp () {
+        return comp;
     }
     
-    public void setLap(Laptop lap) {
-        this.lap = lap;
+    public void setComp(Computer comp) {
+        this.comp = comp;
     }
     
     // Add getter/setter for age if needed

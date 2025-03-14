@@ -4,14 +4,15 @@
     xsi:schemaLocation="
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <!-- bean definitions here -->
+    <!-- Define Laptop as a bean -->
     <bean id="laptop" class="com.example.Laptop"></bean>
-    
+    <bean id="desktop" class="com.example.Desktop"></bean>
+
+    <!-- Define Alien bean, injecting Laptop -->
     <bean id="alien" class="com.example.Alien">
-        <!-- <property name="lap" ref="laptop"></property> -->
-        <constructor-arg type="com.example.Laptop" ref="laptop"/>
-        <constructor-arg value="32"/>
-        
+        <constructor-arg index="0" type="int" value="32"/>
+        <constructor-arg index="1" ref="laptop"/>
+        <constructor-arg index="2" ref="desktop"/>
     </bean>
-    
+
 </beans>

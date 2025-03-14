@@ -9,7 +9,7 @@ public class Main {
 
         Alien obj = (Alien) context.getBean("alien");
         obj.code();
-        Alien obj2 = (Alien) context.getBean("alien");
-        obj2.code();
+        // Alien obj2 = (Alien) context.getBean("alien");
+        // obj2.code();
     }
 }
